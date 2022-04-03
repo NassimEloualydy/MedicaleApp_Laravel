@@ -1,0 +1,978 @@
+/*style*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Kaushan Script', cursive;
+font-family: 'Nunito', sans-serif;
+overflow-x: hidden;
+z-index: 1;
+scroll-behavior: smooth;
+}
+.List_items_navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    z-index: 100;
+    background-color: white;
+}
+.item_navbar_member{
+    margin-left: 1%;
+    margin-right: 1%;
+    line-height: 70px;
+    font-weight: bolder;
+    font-size: 2vh;
+    visibility: visible;
+    cursor: pointer;
+    transition: .3s;
+}
+.item_navbar_member_icon{
+    margin-left: 1%;
+    margin-right: 1%;
+    line-height: 70px;
+    font-weight: bolder;
+    font-size: 18px;
+visibility: hidden;
+margin-top: 1%;
+display: none;
+transition: .3s;
+}
+.item_navbar_member:hover,.item_navbar_member_icon:hover,a:hover{
+    transition: .3s;
+    color: rgb(24, 182, 169);
+}
+.menu_nav_normal{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    z-index: 10;
+
+}
+.icon_menu{
+    font-size: 50px;
+    line-height: 18px;
+    
+}
+.menu_hide{
+    width: 100%;
+    height: 91vh;
+    z-index: 10;
+    background-color: white;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    bottom: 0;
+    left: -100%;
+    transition: .3s;
+    
+    z-index: 5;
+}
+.item_navbar_member_hide{
+    display: block;
+    cursor: pointer;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    font-size: 20px;
+    font-weight: bolder;
+   transition: .3s; 
+}
+.item_navbar_member_hide:hover{
+    transition: .3s;
+    color: rgb(24, 182, 169);
+}
+a:hover{
+    transform: .3s;
+    color: rgb(24, 182, 169);
+
+}
+.compt_image{
+    width: 65px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 65px;
+    object-fit: cover;
+    margin-right: 5%;
+    transition: .3s;
+}
+a{
+    color: black;
+    text-decoration: none;
+    transition: .3s;
+}
+.section_item{
+    width: 100%;
+    height: 100vh;
+    color:black;
+    transition: .3s;
+    border: 1px solid black;
+overflow: hidden;
+}
+.nom_compt{
+    font-size: 30px;
+    color: gray;
+    position: relative;
+    right: 20px;
+    transition: .3s;
+}
+
+.appear{
+    opacity: 1;
+    
+}
+.appear:nth-child(2n){
+    animation: member_section_right .4s linear .6s backwards;
+}
+.appear:nth-child(2n+1){
+    animation: member_section_left .4s linear .6s backwards;
+}
+.section{
+    width: 100%;
+    height: 90vh;
+    transition: .3s;
+    overflow: hidden;
+}
+.section_f{
+    margin-top: 10vh;
+}
+.contaier_boxes{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    transform: .3s;
+
+}
+.box_item{
+width: 45%;
+height: 74vh;
+border: 1px solid black;
+transition: .3s;
+}
+.box_item_formulaire_visite{
+    width: 45%;
+    height: 74vh;
+    border: 1px solid black;
+    transition: .3s;
+    
+}
+.comp_user{
+    position: fixed;
+    right: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 50;
+    backdrop-filter: blur(5px);
+    transition: .3s;
+    
+}
+.patient_detail{
+    position: fixed;
+    right: 100%;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 49;
+    backdrop-filter: blur(5px);
+    transition: .3s;
+}
+.compt_user_form{
+    width: 70%;
+    height:80vh;
+    background-color: white;
+    color: black;
+    margin-top: 15vh;
+    transition: .3s;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.compt_user_form_animation{
+    animation-delay: 2s;
+    animation: compt_user_form .4s linear .6s backwards;
+
+}
+.patient_detail_form{
+    width: 95%;
+    margin-top: 2.5vh;
+    height: 95vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:white;
+
+}
+.btn_go_up{
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    border: 1px solid black;
+    font-weight: bolder;
+    border-radius:10px;
+    position: fixed;
+    right: 2vh;
+    bottom: 2vh;
+    background-color: white;
+    transition: .3s;
+    
+}
+.btn_go_up:hover{
+    color: rgb(24, 182, 169);
+    background-color: white;
+    border-color: rgb(24, 182, 169);
+    transform: .3s;
+}
+.title::after{
+ content: "";
+ width: 10vh;
+ height: 3px;
+ display: block;
+ background-color: rgb(24, 182, 169);
+ position: relative;
+ border: 1px solid rgb(24, 182, 169);
+ border-radius:5px;
+}
+.container_inputs{
+    width: 100%;
+display:  flex;
+justify-content: space-evenly;
+align-items: center;
+transition: .3s;
+}
+.container_inputs_full{
+    display: block;
+    width :100%;
+    transition: .3s;
+}
+.input_item{
+    width: 50%;
+    transition: .3s;
+}
+.input_item_full{
+    width: 100%;
+}
+#desc_visite{
+    width:95%;
+    transition: .3s;
+}
+.container_inputs_search{
+    width: 100%;
+    display:  flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .3s;
+}
+.input_item_search{
+    width: 33%;
+    transition: .3s;
+}
+.list_items{
+    width: 95%;
+    height:28vh;
+    transition: .3s;
+    border-radius: 5px;
+
+}
+
+.item_member_list{
+    width:90%;
+    height:50%;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+.input_text{
+    width: 90%;
+    height: 40px;
+    transition: .3s;
+    padding-left:5px;
+}
+.input_text_time{
+    width: 50%;
+    height: 40px;
+    transition: .3s;
+    padding-left:5px;
+}
+.input_item_time{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.table_liste thead tr td,thead tr th,tbody tr td{
+    padding: 8px;
+}
+table{
+    border-collapse: collapse;
+}
+thead{
+    background-color: rgb(24, 182, 169);
+    color: white;
+    width: 90%;
+}
+.img_patient{
+    border: 1px solid black;
+    width:50px;
+    height: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+.inputs_btn{
+    padding: 5px;
+    font-size: 18px;
+    background-color: transparent;
+    border:1px solid black;
+    color: black;
+    border-radius: 5px;
+ transition: .3s;   
+}
+.inputs_btn:hover{
+    border:1px solid rgb(24, 182, 169);
+    color: rgb(24, 182, 169);
+  transition: .3s;
+}
+.icon_table{
+    border: 1px solid black;
+    padding:5px;
+    border-radius:5px;
+    cursor: pointer;
+}
+.icon_detail{
+    color: rgb(0, 130, 139);
+    border-color: rgb(0, 130, 139);
+    transition: .3s;
+}
+.icon_detail:hover{
+    background-color:rgb(0, 130, 139);
+    color: white;
+    border-color: white;
+ 
+}
+.icon_delete{
+    color: darkred;
+    border-color: darkred;
+    transition: .3s;
+}
+.icon_delete:hover{
+    background-color:darkred;
+    color: white;
+    border-color: white;
+ 
+}
+.icon_update{
+    color: darkorange;
+    border-color: darkorange;
+    transition: .3s;
+}
+.icon_update:hover{
+    background-color:darkorange;
+    color: white;
+    border-color: white;
+ 
+}
+.patient_detail_form_animation{
+ animation: patient_detail_form .4s linear .6s backwards;
+}
+/* end style */
+/*style detail patient*/
+.comp_user{
+    position: fixed;
+    right: 100%;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 50;
+    backdrop-filter: blur(5px);
+    transition: .3s;
+    
+}
+.box_detail_patient{
+    width: 95%;
+    height: 25vh;
+    border: 1px solid silver;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+.box_detail_patient_visits{
+    width: 90%;
+    height: 35vh;
+    border: 1px solid silver;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+ transition: .3s;
+}
+.box_detail_patient_item_visits{
+ width: 30%;
+    height: 90%;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.img_detail_patient{
+    width: 110px;
+    height: 110px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    object-fit:cover;
+    padding: 5px;
+  overflow: hidden;
+}
+.box_detail_patient_item:nth-child(1){
+    width: 25%;
+  overflow: hidden;
+  transition: .3s;
+
+}
+.box_detail_patient_item:nth-child(2){
+    width: 75%;
+  overflow: hidden;
+  transition: .3s;
+
+}
+.detai_table_patient tr td,th{
+    padding: 10px;
+}
+.detai_table_patient tr th{
+    text-align: left;
+}
+.List_visite_Detail{
+    width: 90%;
+    height: 28vh;
+    border: 1px solid silver;
+}
+
+.bar_recherche_patient_RDV{
+    width: 50%;
+    height: 50px;
+    border: 1px solid silver;
+}
+.List_RDV{
+    width: 95%;
+    height:30vh;
+    border: 1px solid silver;
+   overflow-y: scroll; 
+   margin-top: 5px;  
+   transition: .3s;
+}
+.container_rdv_item{
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .3s;
+}
+.item_rdv_container{
+    width: 48%;
+    height:28vh;
+    border: 1px solid silver;    
+    transition: .3s;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+.img_RDV_patient{
+    width: 50px;
+    height: 50px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    object-fit:cover;
+    padding: 5px;
+    overflow: hidden;
+}
+.box_item_rdv{
+    width: 45%;
+
+}
+.box_item_rdv table tr th{
+    text-align: left;
+}
+.box_item_rdv table tr td,#nom_patient_RDV{
+   font-size: 80%; 
+}
+.box_item_rdv_table{
+ width: 70%;
+}
+.box_item_rdv_img{
+width: 25%;
+}
+.container_input{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: .3s;
+}
+.input_text_item{
+    width: 45%;
+    transform: .3s;
+
+}
+.input_text{
+    width: 90%;
+    height: 40px;
+    transition: .3s;
+}
+.select_input{
+    width: 100%;
+    /* margin-right: 20%; */
+    transition: .3s;
+}
+/*end of style deatail */
+.input_time_search{
+    width:50%;
+}
+.visite_detail{
+    position: fixed;
+    right: 100%;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 49;
+    backdrop-filter: blur(5px);
+    transition: .3s;
+}
+.medicament_detail{
+    position: fixed;
+    right: 100%;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 49;
+    backdrop-filter: blur(5px);
+    transition: .3s;
+}
+.visite_detail_form{
+    width: 95%;
+    margin-top: 2.5vh;
+    height: 95vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:white;
+    transition: .3s;
+}
+.table_visite_detail{
+    width:100%;
+}
+.table_visite_detail th{
+    text-align: left;
+}
+.input_item_search_medicament{
+    width: 65%;
+}
+/* #format_Medicament{
+    
+} */
+/* animation style*/
+@keyframes patient_detail_form {
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+}
+@keyframes compt_user_form {
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+}
+@keyframes member_section_left{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+
+    }
+}
+@keyframes member_section_right{
+    0%{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+}
+.box_vivist_patient{
+    
+    transition:.3s;
+}
+
+.list_ordonnance_medicament{
+    width:90%;
+    height: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: .3s;
+}
+.section_ordonnance{
+    height: 130vh;
+    transition : .3s;
+}
+.section_ordonnance_box_container{
+    height: 110vh;
+    transition: .3s;
+}
+.box_item_ordonnance{
+    height: 100vh;
+    transition :.3s;
+}
+.item_medicamment_ordonnance{
+    height: 110px;
+    width: 95%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px 0px;
+    /* font-size: 12px; */
+text-align: left;
+padding-left: 5px;
+transition: .3s;
+box-shadow:  inset 0 0 0 0 rgb(24, 182, 169);
+cursor: pointer;
+}
+.item_medicamment_ordonnance:hover{
+    box-shadow:  inset -400px 0 0 0 rgb(24, 182, 169);    
+    transition: .3s;
+    color: white;
+}
+.item_medicamment_ordonnance .ticket_MO{
+    font-weight: bolder;
+    line-height:20px;
+}
+.item_medicamment_ordonnance .value_MO{
+    line-height:20px;
+    
+}
+#date_ordonnance{
+    margin-left: 5%;
+}
+.red_on{
+    height: 110px;
+    width: 95%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px 0px;
+    /* font-size: 12px; */
+text-align: left;
+padding-left: 5px;
+transition: .3s;
+box-shadow:  inset 0 0 0 0 rgb(182, 24, 24);
+cursor: pointer;
+}
+.red_on:hover{
+    color: white;
+    box-shadow:  inset -400px 0 0 0 rgb(182, 24, 24);
+    transition:.3s;
+}
+.list_items_ordonnance{
+    width: 95%;
+    height:45vh;
+    transition: .3s;
+    border-radius: 5px;
+}
+
+
+/* end animation style */
+/*respencive style*/
+@media (max-width:1150px){
+     .visite_detail{
+        position: fixed;
+        right: 100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 49;
+        backdrop-filter: blur(5px);
+        transition: .3s;
+    }
+    .medicament_detail{
+        position: fixed;
+        right: 100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 49;
+        backdrop-filter: blur(5px);
+        transition: .3s;
+         
+    }
+    #desc_visite{
+        width:75%;
+        transition: .3s;
+    }
+    #nom_patient_visite{
+        margin-right: 0%;
+   }
+    .select_input{
+        width: 83%;
+        margin-left: 0%;
+        transition: .3s;
+    }
+    .List_RDV{
+        width: 95%;
+        height:62vh;
+        border: 1px solid silver;
+       overflow-y: scroll; 
+       margin-top: 5px;  
+       transition: .3s;
+    }
+    .container_input{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        transition: .3s;
+    }
+    .input_text_item{
+        width: 90%;
+        transform: .3s;
+    }
+    .container_rdv_item{
+        margin-top: 5px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+    }
+    .item_rdv_container{
+        width: 90%;
+        height: 150px;
+        padding: 5px;
+        border: 1px solid silver;    
+        transition: .3s;
+    }   
+
+    .box_detail_patient{
+        width: 90%;
+        height: 55vh;
+        border: 1px solid silver;
+        display: block;
+        align-items: center;
+        padding: 10px;
+        overflow: hidden;
+        transition: .3s;
+    }
+    .box_detail_patient_visits{
+        width: 90%;
+        height: 75vh;
+        border: 1px solid silver;
+        overflow: hidden;
+        display: block;
+        align-items: center;
+        padding: 10px;
+        overflow:hidden;
+     transition: .3s;
+    }
+    /* /* .box_detail_patient_item_visits:nth-child(1){
+     width: 100%;
+        height: 30%;
+        transition: .3s;
+    }
+     */
+    .box_detail_patient_item_visits{
+        width: 100%;
+        height: 35%;
+        transition: .3s;
+    
+       } 
+    .img_detail_patient{
+        width: 100px;
+        height: 100px;
+        border: 1px solid silver;
+        border-radius: 10px;
+        object-fit: contain;
+    }
+    .box_detail_patient_item:nth-child(1){
+        width: 100%;
+      overflow: hidden;
+      transition: .3s;
+    
+    }
+    .box_detail_patient_item:nth-child(2){
+        width: 100%;
+      overflow: hidden;
+      transition: .3s;
+    
+    }
+    .detai_table_patient tr td,th{
+        padding: 10px;
+    }
+    .detai_table_patient tr th{
+        text-align: left;
+    }
+    .List_visite_Detail{
+        width: 90%;
+        height: 48vh;
+        border: 1px solid silver;
+    }
+    .comp_user{
+        position: fixed;
+        right: 100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 50;
+        backdrop-filter: blur(5px);
+        transition: .3s;
+        
+    }
+    .patient_detail{
+        position: fixed;
+        right: 100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 49;
+        backdrop-filter: blur(5px);
+        transition: .3s;
+    }
+    .list_items{
+        width: 95%;
+        height:28vh;
+        transition: .3s;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    
+    .list_items{
+    width: 95%;
+    height:55vh;
+    transition: .3s;
+}
+.list_items_ordonnance{
+    width: 95%;
+    height:75vh;
+    transition: .3s;
+    border-radius: 5px;
+}
+
+    .container_inputs{
+        width: 100%;
+    display:  block;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .3s;
+    }
+    .input_item{
+        width: 80%;
+        transition: .3s;
+    }
+.compt_user_form{
+    width: 90%;
+    height:80vh;
+    background-color: white;
+    color: black;
+    margin-top: 15vh;
+    transition: .3s;
+}
+    .section,.section_f{
+   height: 235vh;
+   transition: .3s;
+   overflow: hidden;
+    }
+    .contaier_boxes{
+        width: 100%;
+        height: 230vh;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transform: .3s;
+    
+    }
+    .box_item{
+    width: 90%;
+    height: 106vh;
+    border: 1px solid black;
+    transition: .3s;
+    margin-left: 5%;
+    }
+    .box_item_formulaire_visite{
+        width: 90%;
+        height: 115vh;
+        border: 1px solid black;
+        transition: .3s;
+        margin-left: 5%;
+            
+    }
+.item_navbar_member_hide{
+    display: block;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 20px;
+    font-weight: bolder;
+   transition: .3s; 
+}
+    .compt_image{
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 50px;
+        object-fit: contain;
+        position: relative;
+        left: 20px;
+        transition: .3s;
+        position: relative;
+        bottom: 10px;
+    }
+    
+    .item_navbar_member_icon{
+        display: block;
+        visibility: visible;
+        margin-left:70%;
+        
+    }
+    .item_navbar_member{
+        visibility: hidden;
+        display: none;
+    }
+    .nom_compt{
+        font-size: 30px;
+        color: gray;
+        display: block;
+        visibility: visible;
+        width: 100%;
+        transition: .3s;
+        position: absolute;
+        left: 20%;
+    }
+    .box_item_ordonnance{
+        height: 185vh;
+        transition :.3s;
+    }
+    
+.section_ordonnance{
+    height: 385vh;
+    transition : .3s;
+
+}
+    .box_vivist_patient{
+        height: 30vh;
+        transition:.3s;
+    }
+
+    .section_ordonnance_box_container{
+        height: 455vh;
+        transition: .3s;
+    }
+    .list_ordonnance_medicament{
+        width:90%;
+        height: 250px;
+        border: 1px solid black;
+        transition: .3s;
+    }
+    .title{
+        margin-bottom: 15px;
+        transition: .3s;
+    }
+}
+
+/*end respencive style*/
+/* 1350px */
